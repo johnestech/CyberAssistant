@@ -9,7 +9,7 @@ load_dotenv()
 st.set_page_config(page_title='CyberSecurity Assistant',page_icon='🛡️')
 
 # Read api from local file or cloud
-api_key = os.getenv("GEMINI_API_KEY") #or st.secrets.get("GEMINI_API_KEY")
+api_key = os.getenv("GEMINI_API_KEY") or st.secrets.get("GEMINI_API_KEY")
 
 SYSTEM_PROMPT = """
 You are a cyber security assistant. You have decades of experience in cyber security, ethical hacking
